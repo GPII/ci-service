@@ -77,6 +77,12 @@
     publishers:
       - email:
           recipients: ci@lists.gpii.net
+    wrappers:
+      - timeout:
+          # Abort after these many minutes
+          timeout: 60
+          # Mark the build as failed
+          fail: true
 
 - job:
     name: gpii-app-test
